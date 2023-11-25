@@ -7,6 +7,14 @@
 # 설명서 
 
 - ver04에서의 프로젝트를 프로젝트 구성으로 나눠보기
+- node 명령어를 package.json으로 지정
+
+```
+  "scripts": {
+    "start": "node src/index.js"
+  },
+```
+
 - 보통은 아래와 같이 니눠진다.
 
 ```
