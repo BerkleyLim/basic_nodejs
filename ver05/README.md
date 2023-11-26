@@ -38,6 +38,10 @@
             ---- index.js (cafe24 호스팅시 web.js)
             ---- config
             ---- controller
+                  ---- index.js (각 api별로 설정)
+                  ---- MainViewController.js (메인용 api 별 입/출력 설정)
+                  ---- MemberController.js (회원 정보용 api 별 입/출력 설정)
+                  ---- StoreController.js (매장 정보용 api 별 입/출력 설정)
             ---- service
       ---- resource
 ```
