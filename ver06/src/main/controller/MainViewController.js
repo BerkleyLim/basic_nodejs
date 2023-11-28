@@ -1,5 +1,11 @@
+const fs = require('fs')
+
 exports.mainView = (request, response, next) => {
-  response.send('main 화면입니다.')
+  try {
+    response.json({pageNm: 'main 화면'})
+  } catch (err) {
+    console.log(err)
+  }
 };
 
   

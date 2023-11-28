@@ -1,4 +1,8 @@
 exports.storeView = (request, response, next) => {
-  response.send('매장 정보 입니다!!!')
+  try {
+    response.json({pageNm:'매장 화면', id:"홍길동", storeCd: 'cd1'})
+  } catch (err) {
+    console.log(err)
+  }
 };
   
