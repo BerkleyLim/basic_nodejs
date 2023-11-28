@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+  <h1>화면 api 테스트</h1>
+  <button onclick="viewHtml('/')">api : /</button>
+  <button onclick="viewHtml('/memberView')">api : /memberView/</button>
+  <button onclick="viewHtml('/storeView')">api : /storeView/</button>
+
+  <div id="htmlRequest">
+
+  </div>
+  <script>
+    const viewHtml = (path) => {
+      fetch('http://localhost:300' + path)
+      .then(res => res.json())
+      .then(
+        res => {
+          document.getElementById('htmlRequest').innerHTML = "response 값 : " + JSON.stringify(res);
+        }
+      )
+      .catch(e => console.log(e))
+    }
+  </script>
+</body>
+</html>
