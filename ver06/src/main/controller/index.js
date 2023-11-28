@@ -14,6 +14,7 @@ const cors = require('cors');
 // }
 
 
+// 각각 api 접근 허용을 위해 cors()를 추가해줍니다.
 router.get('/', cors(), MainViewController.mainView)
 router.get('/memberView/', cors(), MemberController.memberView)
 router.get('/storeView/', cors(), StoreController.storeView)
