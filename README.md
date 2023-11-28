@@ -39,14 +39,10 @@
 
 
 ## ver06 (예정)
-- ver05 기반으로 my-batis를 활용하여 데이터 API 받아오고 결과 출력
-<br/>
-
-## ver07 (예정)
 - ver06 프로젝트에서 React 프론트엔드 프로젝트에 API 연동
 - 간단한 Nodejs는 백엔드 서버로 구성하기
 - cors 문제 해결 코드 작성
 <br/>
 
-## ver08 (예정)
+## ver07 (예정)
 - nodejs를 mybatis 연동하여 crud 게시판 구현
