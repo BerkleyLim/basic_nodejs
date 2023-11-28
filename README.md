@@ -46,3 +46,4 @@
 
 ## ver07 (예정)
 - nodejs를 mybatis 연동하여 crud 게시판 구현
+- 프론트 서버 react 서버를 이용하여 api 통신 제공
