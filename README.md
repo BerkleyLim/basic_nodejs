@@ -44,14 +44,20 @@
 - cors 문제 해결 코드 작성
 <br/>
 
-## ver07
+
+## ver07 
+- ver06에 이어서 Method를 Post로 바꿔 실행해보자
+- 이후, cvs를 이용하여 data를 저장하고, 데이터 정제 작업을 진행해보자.
+
+
+## ver08 (예정)
 - nestjs 템플릿 설치하고 구성해보기
 - my-batis 연동 연습
 - 각 api별로 로직 작성
 - db 연동하여 진행하기
 <br/>
 
-## ver08 (예정)
+## ver09 (예정)
 - nodejs를 mybatis 연동하여 crud 게시판 구현
 - 프론트 서버 react 서버를 이용하여 api 통신 제공
 - 프론트 서버에서 사용할 host만 cors 권한 부여
