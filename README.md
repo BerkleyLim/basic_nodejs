@@ -46,6 +46,8 @@
 ## ver07 
 - ver06에 이어서 Method를 Post로 바꿔 실행해보자
 - 이후, cvs를 이용하여 data를 저장하고, 데이터 정제 작업을 진행해보자.
+- post로 받을 경우 body-parser 설치
+- 이후, database가 아닌 csv로 데이터를 저장하는 형식으로 지정해보기
 
 
 ## ver08 (예정)
