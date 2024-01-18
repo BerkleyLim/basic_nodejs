@@ -13,7 +13,7 @@ const http = require('http').createServer(app);
 const routes = require('./controller')
 
 // body - parser
-app.use(bodyParser.json)
+app.use(bodyParser.json())
 
 app.use(routes)
 // 서버 실행시 화면 표시
