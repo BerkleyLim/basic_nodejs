@@ -1,24 +1,29 @@
-const csv = require("csvtojson");
-
-const memberFilePath = __dirname + "../../resource/csv/member.csv";
-const groupFilePath = __dirname + "../../resource/csv/group.csv";
+const fs = require('fs');
 
 // 참조 : https://ooeunz.tistory.com/26
-exports.CsvTest = async (request, response, next) => {
+// https://tantangerine.tistory.com/206
+exports.CsvTest = (request, response, next) => {
   try {
-    const member = await csv().fromFile(memberFilePath);
-    const group = await csv().fromFile(groupFilePath);
+
+    let member = fs.readFileSync("src/resource/csv/member.csv");
+    member = member.toString('utf-8')
+
+    let group = fs.readFileSync("src/resource/csv/group.csv");
+    group = group.toString('utf-8')
+
+    console.debug(group)
+
 
     if (!member || !group) console.log(`file read err : ${err}`); // debug
 
-    IDX = req.params.groupIdx;
+    IDX = request.params.groupIdx;
     let groupNum = group[String(Number(IDX - 1))].name;
 
     let people = member
       .filter((it) => it.groupIdx === IDX)
       .map((it) => it.name);
 
-    res.send(`${groupNum} : ${people}`);
+    response.send(`${groupNum} : ${people}`);
   } catch (err) {
     console.log(`err with csv : ${err}`);
   }
