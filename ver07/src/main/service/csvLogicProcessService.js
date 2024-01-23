@@ -1,49 +1,53 @@
 const fs = require('fs');
 
-// 1) csv 가공하는 단 - json 형식 반환
-export const processCsvDataViewObject = (csvData) => {
+// 1) csv 가공하는 단 - 리스트 출력 - json 형식 반환
+exports.processCsvToJsonList = (path) => {
+  let csv = fs.readFileSync(path).toString('utf-8');
+
+  let csvData = csv.replaceAll('\r', '').replaceAll(' ', '').split("\n");
   let key = csvData[0].split(',');
 
-  let typeMember = {}
+  let dataSet = {}
   for (let i = 0; i < key.length; i++) {
-    typeMember = {
-      ...typeMember,
+    dataSet = {
+      ...dataSet,
       [key[i]]: ''
     }
   }
-  console.log(typeMember)
-  return typeMember
-}
 
-// 2) csv 가공하는 단 - 리스트 출력 - json 형식 반환
-export const processCsvDataViewList = (csvData) => {
-  let key = csvData[0].split(',');
-
-  let typeMember = {}
-  for (let i = 0; i < key.length; i++) {
-    typeMember = {
-      ...typeMember,
-      [key[i]]: ''
-    }
-  }
-  console.log(typeMember)
-
-  let gagongRecord = new Array();
+  let csvToJSON = new Array();
 
   for (let gagongDataIndex = 1; gagongDataIndex < csvData.length; gagongDataIndex++) {
-    let gagong = memberData[gagongDataIndex].split(',');
+    let processData = csvData[gagongDataIndex].split(',');
     for (let i = 0; i < key.length; i++) {
-      typeMember = {
-        ...typeMember,
-        [key[i]]: gagong[i]
+      dataSet = {
+        ...dataSet,
+        [key[i]]: processData[i]
       }
     }
     
-    gagongMember.push(typeMember)
+    csvToJSON.push(dataSet)
   }
-  console.log(gagongMember)
 
-  console.log("로직 성공")
+  console.log(csvToJSON)
 
-  return data
+  return csvToJSON
+}
+
+// 2) csv 가공하는 단 - 객체 출력 - json 형식 반환
+exports.processCsvToJsonObject = (path) => {
+  let csv = fs.readFileSync(path).toString('utf-8');
+
+  let csvData = csv.replaceAll('\r', '').replaceAll(' ', '').split("\n");
+  let key = csvData[0].split(',');
+
+  let dataSet = {}
+  for (let i = 0; i < key.length; i++) {
+    dataSet = {
+      ...dataSet,
+      [key[i]]: ''
+    }
+  }
+
+  return dataSet;
 }

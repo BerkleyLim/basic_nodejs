@@ -1,47 +1,19 @@
 const fs = require('fs');
 
+const {processCsvToJsonList} = require('../service/csvLogicProcessService')
+
 // 참조 : https://ooeunz.tistory.com/26
 // https://tantangerine.tistory.com/206
 exports.CsvTest = (request, response, next) => {
   try {
-
-    let member = fs.readFileSync("src/resource/csv/member.csv");
-    member = member.toString('utf-8')
-
-    let group = fs.readFileSync("src/resource/csv/group.csv");
-    group = group.toString('utf-8')
-
-    // 여기서부터 데이터 가공 작업 실시
-    let memberData = member.replaceAll('\r', '').replaceAll(' ', '').split("\n");
-    let key = memberData[0].split(',');
-
-    let typeMember = {}
-
-    for (let i = 0; i < key.length; i++) {
-      typeMember = {
-        ...typeMember,
-        [key[i]]: ''
-      }
-    }
-    let gagongMember = new Array();
-
-    for (let gagongDataIndex = 1; gagongDataIndex < memberData.length; gagongDataIndex++) {
-      let gagong = memberData[gagongDataIndex].split(',');
-      for (let i = 0; i < key.length; i++) {
-        typeMember = {
-          ...typeMember,
-          [key[i]]: gagong[i]
-        }
-      }
-      
-      gagongMember.push(typeMember)
-    }
+    const member = processCsvToJsonList('src/resource/csv/member.csv')
+    const group = processCsvToJsonList('src/resource/csv/group.csv')
     // 데이터 가공 작업 끝
-    console.log("로직 성공")
 
     if (!member || !group) console.log(`file read err : ${err}`); // debug
 
-    IDX = request.params.groupIdx;
+    IDX = request.body.groupIdx;
+    console.log(request.body)
     let groupNum = group[String(Number(IDX - 1))].name;
 
     let people = member
