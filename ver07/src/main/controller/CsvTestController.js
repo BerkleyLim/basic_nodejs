@@ -11,8 +11,33 @@ exports.CsvTest = (request, response, next) => {
     let group = fs.readFileSync("src/resource/csv/group.csv");
     group = group.toString('utf-8')
 
-    console.debug(group)
+    // 여기서부터 데이터 가공 작업 실시
+    let memberData = member.replaceAll('\r', '').replaceAll(' ', '').split("\n");
+    let key = memberData[0].split(',');
 
+    let typeMember = {}
+
+    for (let i = 0; i < key.length; i++) {
+      typeMember = {
+        ...typeMember,
+        [key[i]]: ''
+      }
+    }
+    let gagongMember = new Array();
+
+    for (let gagongDataIndex = 1; gagongDataIndex < memberData.length; gagongDataIndex++) {
+      let gagong = memberData[gagongDataIndex].split(',');
+      for (let i = 0; i < key.length; i++) {
+        typeMember = {
+          ...typeMember,
+          [key[i]]: gagong[i]
+        }
+      }
+      
+      gagongMember.push(typeMember)
+    }
+    // 데이터 가공 작업 끝
+    console.log("로직 성공")
 
     if (!member || !group) console.log(`file read err : ${err}`); // debug
 
