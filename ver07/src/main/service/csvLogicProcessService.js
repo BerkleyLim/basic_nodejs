@@ -4,7 +4,8 @@ const fs = require('fs');
 exports.processCsvToJsonList = (path) => {
   let csv = fs.readFileSync(path).toString('utf-8');
 
-  let csvData = csv.replaceAll('\r', '').replaceAll(' ', '').split("\n");
+  // let csvData = csv.replaceAll('\r', '').replaceAll(' ', '').split("\n");
+  let csvData = csv.replaceAll('\r', '').split("\n");
   let key = csvData[0].split(',');
 
   let dataSet = {}
