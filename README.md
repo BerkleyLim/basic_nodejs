@@ -44,20 +44,26 @@
 
 
 ## ver07 
-- ver06에 이어서 Method를 Post로 바꿔 실행해보자
-- 이후, cvs를 이용하여 data를 저장하고, 데이터 정제 작업을 진행해보자.
-- post로 받을 경우 body-parser 설치
-- 이후, database가 아닌 csv로 데이터를 저장하는 형식으로 지정해보기
+- cvs를 이용하여 data를 저장하고, 데이터 정제 작업을 진행해보자.
 
+<br/>
 
 ## ver08 (예정)
+
+- ver07에 이어서 Method를 Post로 진행해보기
+- post로 받을 경우 body-parser 설치
+- csv로 데이터를 저장하는 형식으로 지정하고, 유사 CRUD 만들기
+
+<br/>
+
+## ver09 (예정)
 - nestjs 템플릿 설치하고 구성해보기
 - my-batis 연동 연습
 - 각 api별로 로직 작성
 - db 연동하여 진행하기
 <br/>
 
-## ver09 (예정)
+## ver10 (예정)
 - nodejs를 mybatis 연동하여 crud 게시판 구현
 - 프론트 서버 react 서버를 이용하여 api 통신 제공
 - 프론트 서버에서 사용할 host만 cors 권한 부여
