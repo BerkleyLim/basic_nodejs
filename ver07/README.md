@@ -8,6 +8,7 @@
 
 # 설명서 
 
-- nestjs 설치
-
-- mybatis 설정
+- csv 설정하기
+  - csvtojson 설치
+- resource에 csv 파일 넣기
+- csv 로직을 service단에 두고 json과 csv 컨버터 하기
