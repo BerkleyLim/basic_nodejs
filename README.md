@@ -49,11 +49,11 @@
 
 <br/>
 
-## ver08 (예정)
+## ver08
 
 - ver07에 이어서 Method를 Post로 진행해보기
-- post로 받을 경우 body-parser 설치
 - csv로 데이터를 저장하는 형식으로 지정하고, 유사 CRUD 만들기
+- post로 받을 경우 body-parser 설치
 
 <br/>
 
