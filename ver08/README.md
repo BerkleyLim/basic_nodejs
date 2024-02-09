@@ -13,3 +13,5 @@
 - resource에 csv 파일 넣기
 - csv 로직을 service단에 두고 json과 csv 컨버터 하기
 - CRUD 형태로 게시판 데이터 출력하기
+- get 방식 : read
+- post 방식 : create, delete, update
