@@ -1,7 +1,7 @@
 // 이부분 router를 지정하여 각 사용할 api 지정
 const router = require('express').Router();
 const MainViewController = require('./MainViewController');
-const CsvTestController = require('./CsvTestController');
+// const CsvTestController = require('./CsvTestController');
 
 // cors 해결
 const cors = require('cors');
@@ -17,6 +17,6 @@ const cors = require('cors');
 router.get('/', cors(), MainViewController.mainView)
 
 // post를 이용하여 데이터 불려오기
-router.post('/csvTest/', cors(), CsvTestController.CsvTest)
+// router.post('/csvTest/', cors(), CsvTestController.CsvTest)
 
 module.exports = router;
