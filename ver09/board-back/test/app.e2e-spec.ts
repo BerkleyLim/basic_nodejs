@@ -3,6 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 
+// 여기서는 end-to-end 테스트 진행하는 구조
 describe('AppController (e2e)', () => {
   let app: INestApplication;
 
