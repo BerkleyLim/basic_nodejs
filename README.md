@@ -68,7 +68,7 @@
 
 ## ver10 (예정)
 - nodejs를 mybatis 연동하여 crud 게시판 구현
-- 프론트 서버 react 서버를 이용하여 api 통신 제공
+- 프론트 서버 nextjs 서버를 이용하여 api 통신 제공
 - 프론트 서버에서 사용할 host만 cors 권한 부여
-- React+java(spring boot)로 만든 게시판을 React+nodejs 게시판 버전으로 변경
+- React+java(spring boot)로 만든 게시판을 nextjs+nodejs 게시판 버전으로 변경
 - 게시판 프로젝트 저장소 : https://github.com/BerkleyLim/project_board
