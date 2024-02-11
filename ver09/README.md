@@ -8,11 +8,14 @@
 
 # 설명서 
 
-- nestjs 설치 방법
+- nestjs 설치 및 기본 셋팅 방법
 
 ```
 npm i -g @nestjs/cli
 nest new project-name
+npm install --g nodemon
+npm install express --save
+
 ```
 
 - 참조 : https://wikidocs.net/148194
@@ -27,5 +30,10 @@ nest new project-name
   - test/app.e2e-spec.ts : end-to-end 테스트 진행
 
 
-
+- CRUD generator 부분
+```
+nest g resource
+```
+- 이부분은 crud 설정 시 자동으로 생성해준다.
+- 참조 : https://docs.nestjs.com/recipes/crud-generator
 
