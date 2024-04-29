@@ -16,4 +16,3 @@
 
 - 유틸리티 타입(PartialType) 통해 CreateBoardDto 클래스를 확장
 - 모든 속성을 선택적으로 입력 받도록 함
-- Java로 치면 Mapper 나 Repository에 해당
