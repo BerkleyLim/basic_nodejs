@@ -70,7 +70,7 @@ function App() {
 
     // API를 이용하여 조회
     axios
-      .get("http://localhost:300/api/board/select/list")
+      .get("http://localhost:8080/api/board/select/list")
       .then((res) => {
         setBoard(res.data);
         console.log(res.data);
@@ -93,7 +93,7 @@ function App() {
   const createBoard = (data) => {
     // 이후 api 호출 후 데이터 삽입
     axios
-      .post("http://localhost:300/api/board/insert/board", data)
+      .post("http://localhost:8080/api/board/insert/board", data)
       .then((res) => {
         alert("생성 성공!!");
         // API 호출 완료 후 front 화면에서 생성 행동
@@ -124,7 +124,7 @@ function App() {
   const updateBoard = (data, index) => {
     // 이후 api 호출 후 데이터 수정
     axios
-      .post("http://localhost:300/api/board/update/board", data)
+      .post("http://localhost:8080/api/board/update/board", data)
       .then((res) => {
         alert("수정 성공!!");
         // 불가변성으로 이용하여 해당 데이터 수정
@@ -148,7 +148,7 @@ function App() {
     const deleteData = board[index];
     // 이후 api 호출 후 데이터 삭제
     axios
-      .post("http://localhost:300/api/board/delete/board", deleteData)
+      .post("http://localhost:8080/api/board/delete/board", deleteData)
       .then((res) => {
         alert("삭제 성공!!");
         console.log(res);
