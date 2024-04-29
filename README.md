@@ -70,18 +70,18 @@
 - ver07에 이어서 Method를 Post로 진행해보기
 - csv로 데이터를 저장하는 형식으로 지정하고, 유사 CRUD 만들기
 - post로 받을 경우 body-parser 설치
-- front 서버는 nextjs에서 출력하는 형식으로 개발 진행
   - 여기서, front 에서는 단순 게시판 용으로 활용하기
 - 참조 블로그 : [(8) csv로 데이터 저장, 게시판 CRUD API 만들기](https://berkley.tistory.com/108)
 
 <br/>
 
-## ver09 (예정)
+## ver09 
 
 - nestjs 템플릿 설치하고 구성해보기
-- my-batis 연동 연습
 - 각 api별로 로직 작성
-- db 연동하여 진행하기
+- DB 연동 없이 게시판 기본 구조 설계 및 개발
+- 참조 블로그 : [(9) csv로 데이터 저장, 게시판 CRUD API 만들기](https://berkley.tistory.com/192)
+
 <br/>
 
 ## ver10 (예정)
